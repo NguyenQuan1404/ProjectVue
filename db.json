@@ -1,0 +1,121 @@
+{
+  "posts": [
+    {
+      "id": "6",
+      "title": "another title",
+      "creator": "admin",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate vitae eros ac convallis. Nullam imperdiet quam nec dui facilisis blandit. Duis vehicula semper orci, at efficitur sapien aliquet eu. In dui tortor, imperdiet in est sit amet, placerat commodo erat. Nam id lorem ac nisl egestas rhoncus. Integer vitae vehicula dui, vel commodo enim. Fusce varius ultrices tellus. Mauris nec ante bibendum, sagittis quam ut, dignissim est. Praesent ornare mi at lectus maximus, at tristique lacus dictum. Vestibulum vulputate nisl sit amet quam tincidunt, vel congue lorem lacinia. Mauris iaculis, sem at venenatis vehicula, augue nisi sollicitudin turpis, a pellentesque nibh mauris sit amet felis",
+      "tags": "trips",
+      "time": 3,
+      "image": "https://cellphones.com.vn/sforum/wp-content/uploads/2023/10/canh-dep-2.jpg"
+    },
+    {
+      "id": "8",
+      "title": "another title 8",
+      "creator": "admin",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate vitae eros ac convallis. Nullam imperdiet quam nec dui facilisis blandit. Duis vehicula semper orci, at efficitur sapien aliquet eu. In dui tortor, imperdiet in est sit amet, placerat commodo erat. Nam id lorem ac nisl egestas rhoncus. Integer vitae vehicula dui, vel commodo enim. Fusce varius ultrices tellus. Mauris nec ante bibendum, sagittis quam ut, dignissim est. Praesent ornare mi at lectus maximus, at tristique lacus dictum. Vestibulum vulputate nisl sit amet quam tincidunt, vel congue lorem lacinia. Mauris iaculis, sem at venenatis vehicula, augue nisi sollicitudin turpis, a pellentesque nibh mauris sit amet felis",
+      "tags": "trips",
+      "time": 3,
+      "image": "https://cellphones.com.vn/sforum/wp-content/uploads/2023/10/canh-dep-2.jpg"
+    },
+    {
+      "id": "01ea",
+      "title": "3131",
+      "time": 31313,
+      "image": "https://placehold.co/600x400",
+      "description": "313131",
+      "creator": "admin",
+      "tags": "news"
+    },
+    {
+      "id": "6e59",
+      "title": "3131",
+      "time": 3131313,
+      "image": "https://placehold.co/600x400",
+      "description": "https://placehold.co/600x400",
+      "creator": "admin",
+      "tags": "news"
+    },
+    {
+      "id": "028f",
+      "title": "3131",
+      "time": 3131,
+      "image": "https://placehold.co/600x400",
+      "description": "31313",
+      "creator": "admin",
+      "tags": "news"
+    },
+    {
+      "id": "7724",
+      "title": "313131",
+      "time": 313131,
+      "image": "https://placehold.co/600x400",
+      "description": "31313",
+      "creator": "admin",
+      "tags": "news"
+    }
+  ],
+  "users": [
+    {
+      "id": "7cec",
+      "username": "quan",
+      "email": "quan@gmail.com",
+      "password": "123",
+      "status": "1",
+      "role": "user"
+    },
+    {
+      "id": "2f1e",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123",
+      "status": "1",
+      "role": "admin"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Sách",
+      "status": 1,
+      "id": "1"
+    },
+    {
+      "name": "Vở",
+      "status": 1,
+      "id": "87b5"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
+  ],
+  "Products": [
+    {
+      "name": "Vở 4 ô ly",
+      "price": 20000,
+      "quantity": 55,
+      "img": "https://bizweb.dktcdn.net/thumb/1024x1024/100/334/874/products/vo-4-o-ly-0509-hong-ha-4.jpg?v=1657186180800",
+      "status": 1,
+      "id": "1"
+    },
+    {
+      "name": "Bút chì Than",
+      "price": 5000,
+      "quantity": 12,
+      "img": "https://media.istockphoto.com/id/111911916/vi/anh/c%E1%BA%ADn-c%E1%BA%A3nh-b%C3%BAt-ch%C3%AC-s%E1%BA%AFc-m%C3%A0u-cam-v%E1%BB%9Bi-c%E1%BB%A5c-t%E1%BA%A9y.jpg?s=612x612&w=0&k=20&c=ujWtkkAkfKckSXF3vkSiT8nfLqBJ2PFAtqeHzSQji4c=",
+      "status": 1,
+      "id": "8b23"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
