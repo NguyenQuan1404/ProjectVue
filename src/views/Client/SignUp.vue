@@ -3,6 +3,8 @@ import axios from "axios";
 import { reactive } from "vue";
 import { useRouter } from "vue-router";
 
+const API_BASE = import.meta.env.VITE_NGROK_URL || 'http://localhost:3000';
+
 const router = useRouter();
 const form = reactive({
   username: "",
@@ -19,7 +21,7 @@ const handleSignUp = async () => {
   }
 
   try {
-    await axios.post("http://localhost:3000/users", form);
+    await axios.post(`${API_BASE}/users`, form);
     router.push("/login");
   } catch (error) {
     console.error("Lỗi đăng kí:", error);

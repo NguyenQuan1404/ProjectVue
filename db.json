@@ -71,6 +71,14 @@
       "password": "123",
       "status": "1",
       "role": "admin"
+    },
+    {
+      "id": "5ce1",
+      "username": "thach",
+      "email": "thach@gmail.com",
+      "password": "123",
+      "status": "1",
+      "role": "user"
     }
   ],
   "categories": [
@@ -83,6 +91,16 @@
       "name": "Vở",
       "status": 1,
       "id": "87b5"
+    },
+    {
+      "id": "1d55",
+      "name": "Ghế",
+      "status": 1
+    },
+    {
+      "id": "705d",
+      "name": "bàn",
+      "status": 1
     }
   ],
   "comments": [
