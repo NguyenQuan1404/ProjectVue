@@ -60,6 +60,10 @@
       "id": "7cec",
       "username": "quan",
       "email": "quan@gmail.com",
+      "image": "https://auvi.edu.vn/wp-content/uploads/2025/02/anh-ff-29.jpg",
+      "age": 12,
+      "sex": "Nam",
+      "desiredproduct": "Bút chì cao cấp, Gôm tẩy dạng K, Bút mực Nhật",
       "password": "123",
       "status": "1",
       "role": "user"
@@ -71,35 +75,41 @@
       "password": "123",
       "status": "1",
       "role": "admin"
+    }
+  ],
+  "bill": [
+    {
+      "id": "62b1",
+      "iduser": "7cec",
+      "name": "quân",
+      "address": "thổ hoàng 1",
+      "phone": "0706041020",
+      "email": "quan@gmail.com",
+      "total": 20000,
+      "status": "Chờ xác nhận",
+      "createdAt": "2025-10-14T03:11:34.446Z"
     },
     {
-      "id": "5ce1",
-      "username": "thach",
-      "email": "thach@gmail.com",
-      "password": "123",
-      "status": "1",
-      "role": "user"
+      "id": "4e0e",
+      "iduser": "7cec",
+      "name": "quan",
+      "address": "thổ hoàng 5",
+      "phone": "0706041020",
+      "email": "quan@gmail.com",
+      "total": 100000,
+      "status": "Đã hoàn thành",
+      "createdAt": "2025-10-14T09:27:48.817Z"
     }
   ],
   "categories": [
-    {
-      "name": "Sách",
-      "status": 1,
-      "id": "1"
-    },
     {
       "name": "Vở",
       "status": 1,
       "id": "87b5"
     },
     {
-      "id": "1d55",
-      "name": "Ghế",
-      "status": 1
-    },
-    {
-      "id": "705d",
-      "name": "bàn",
+      "id": "7ce8",
+      "name": "Bút",
       "status": 1
     }
   ],
@@ -118,6 +128,7 @@
   "Products": [
     {
       "name": "Vở 4 ô ly",
+      "category": "Vở",
       "price": 20000,
       "quantity": 55,
       "img": "https://bizweb.dktcdn.net/thumb/1024x1024/100/334/874/products/vo-4-o-ly-0509-hong-ha-4.jpg?v=1657186180800",
@@ -125,12 +136,31 @@
       "id": "1"
     },
     {
-      "name": "Bút chì Than",
+      "id": "4e1e",
+      "name": "Bút chì than",
+      "category": "Bút",
       "price": 5000,
-      "quantity": 12,
-      "img": "https://media.istockphoto.com/id/111911916/vi/anh/c%E1%BA%ADn-c%E1%BA%A3nh-b%C3%BAt-ch%C3%AC-s%E1%BA%AFc-m%C3%A0u-cam-v%E1%BB%9Bi-c%E1%BB%A5c-t%E1%BA%A9y.jpg?s=612x612&w=0&k=20&c=ujWtkkAkfKckSXF3vkSiT8nfLqBJ2PFAtqeHzSQji4c=",
-      "status": 1,
-      "id": "8b23"
+      "quantity": 56,
+      "img": "https://bizweb.dktcdn.net/100/336/430/products/e7b8d39d-dd7d-4a4c-a409-0afa0d018c3e.jpg?v=1653736994117",
+      "status": 1
+    },
+    {
+      "id": "4844",
+      "name": "Bút mực",
+      "category": "Bút",
+      "price": 5000,
+      "quantity": 45,
+      "img": "https://product.hstatic.net/1000362139/product/preppy_mau_tim_94562b3db0fe45ba876f2dc5c34286fb.jpg",
+      "status": 1
+    },
+    {
+      "id": "20da",
+      "name": "Sổ tay ghi chép",
+      "category": "Vở",
+      "price": 25000,
+      "quantity": 99,
+      "img": "https://product.hstatic.net/200000033050/product/so-ghi-chep-da-nang-4-in-1-9_a70856095b934a499e749c1bcf0a0437_1024x1024.jpg",
+      "status": 1
     }
   ],
   "profile": {

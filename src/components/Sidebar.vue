@@ -42,6 +42,14 @@ import { RouterLink } from "vue-router"
       >
         <i class="bi bi-box-seam-fill me-2 text-success"></i> Products
       </RouterLink>
+      <!-- 🧾 Orders -->
+      <RouterLink
+        to="/admin/orders"
+        class="menu-item list-group-item list-group-item-action d-flex align-items-center"
+        active-class="active"
+      >
+        <i class="bi bi-receipt-cutoff me-2 text-danger"></i> Orders
+      </RouterLink>
     </div>
   </div>
 </template>

@@ -4,6 +4,7 @@ import { reactive } from "vue";
 import { useRouter } from "vue-router";
 
 const API_BASE = import.meta.env.VITE_NGROK_URL || 'http://localhost:3000';
+console.log(API_BASE)
 
 const router = useRouter();
 const form = reactive({

@@ -129,7 +129,7 @@ onMounted(() => {
           </div>
 
           <div class="card-body">
-            <form>
+           
               <div class="mb-3">
                 <label class="form-label fw-semibold">Tên danh mục</label>
                 <input type="text" class="form-control" placeholder="Nhập tên danh mục..." v-model="category.name" />
@@ -151,7 +151,7 @@ onMounted(() => {
                   <i class="bi bi-arrow-counterclockwise me-1"></i>Hủy
                 </button>
               </div>
-            </form>
+           
           </div>
         </div>
       </div>

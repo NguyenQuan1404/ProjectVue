@@ -10,63 +10,55 @@ import ProductCL from "@/views/Client/Product.vue";
 import Product from "@/views/Admin/Product.vue";
 import User from "@/views/Admin/User.vue";
 import ProductDetail from "@/views/Client/ProductDetail.vue";
+import Profile from "@/views/Client/Profile.vue";
+import Orders from "@/views/Admin/Orders.vue";
+import Oderhistory from "@/views/Client/Oderhistory.vue"; // ✅ đúng với file của bạn
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // ================= CLIENT =================
     {
       path: "/",
-      name: "ClientLayout",
       component: ClientLayout,
       children: [
         { path: "", name: "Home", component: Home },
-        {
-          path: "/sign",
-          name: "sign",
-          component: SignUp,
-        },
-        {
-          path: "/login",
-          name: "Login",
-          component: LoginView,
-        },
-        {
-          path: "/product",
-          name: "ProductCL",
-          component: ProductCL,
-        },
-        {
-          path: '/product/:id',
-          name: 'ProductDetail',
-          component: ProductDetail,
-        },
+        { path: "sign", name: "SignUp", component: SignUp },
+        { path: "login", name: "Login", component: LoginView },
+        { path: "product", name: "ProductCL", component: ProductCL },
+        { path: "profile", name: "Profile", component: Profile },
+        { path: "product/:id", name: "ProductDetail", component: ProductDetail },
+        { path: "cart", name: "Cart", component: () => import("@/views/Client/Cart.vue") },
+        { path: "order-history", name: "Oderhistory", component: Oderhistory }, // ✅
       ],
     },
+
+    // ================= ADMIN =================
     {
       path: "/admin",
       component: AdminLayout,
       meta: { isAuth: true },
       children: [
         { path: "", name: "Dashboard", component: Dashboard },
-        { path: "/admin/category", name: "Category", component: Category },
-        { path: "/admin/product", name: "Product", component: Product },
-        { path: "/admin/user", name: "User", component: User },
+        { path: "category", name: "Category", component: Category },
+        { path: "product", name: "Product", component: Product },
+        { path: "user", name: "User", component: User },
+        { path: "orders", name: "Orders", component: Orders },
       ],
     },
   ],
 });
+
 router.beforeEach((to, from, next) => {
   const currentUser = localStorage.getItem("currentUser");
 
   if (to.meta.isAuth) {
     if (!currentUser) {
-      // chưa đăng nhập
       return next({ name: "Login" });
     }
 
     const user = JSON.parse(currentUser);
 
-    // check role (chỉ cho admin)
     if (user.role !== "admin") {
       alert("Bạn không có quyền truy cập!");
       return next({ name: "Login" });
@@ -75,4 +67,5 @@ router.beforeEach((to, from, next) => {
 
   next();
 });
+
 export default router;

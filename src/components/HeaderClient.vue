@@ -1,18 +1,18 @@
 <script setup>
-import { ref, onMounted } from "vue"
+import { ref, onMounted } from "vue";
 
-const user = ref(null)
+const user = ref(null);
 
 onMounted(() => {
-  const savedUser = localStorage.getItem("currentUser")
-  if (savedUser) user.value = JSON.parse(savedUser)
-})
+  const savedUser = localStorage.getItem("currentUser");
+  if (savedUser) user.value = JSON.parse(savedUser);
+});
 
 const handleLogout = () => {
-  localStorage.removeItem("currentUser")
-  user.value = null
-  window.location.href = "/"
-}
+  localStorage.removeItem("currentUser");
+  user.value = null;
+  window.location.href = "/";
+};
 </script>
 
 <template>
@@ -25,12 +25,7 @@ const handleLogout = () => {
       </router-link>
 
       <!-- Toggle -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navMenu"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -52,6 +47,7 @@ const handleLogout = () => {
 
         <!-- Right -->
         <ul class="navbar-nav ms-auto align-items-center">
+          <!-- Nếu chưa đăng nhập -->
           <li v-if="!user" class="nav-item">
             <router-link to="/login" class="btn btn-outline-primary me-2 px-3 py-1 rounded-pill">
               Đăng nhập
@@ -63,35 +59,41 @@ const handleLogout = () => {
             </router-link>
           </li>
 
-          <!-- Nếu có user -->
+          <!-- Nếu đã đăng nhập -->
           <li v-else class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle d-flex align-items-center"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-            >
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
-                class="rounded-circle border border-primary me-2"
-                width="36"
-                height="36"
-              />
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+              data-bs-toggle="dropdown">
+              <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
+                class="rounded-circle border border-primary me-2" width="36" height="36" />
               <span class="fw-semibold text-dark">{{ user.username }}</span>
             </a>
+
+            <!-- Dropdown menu -->
             <ul class="dropdown-menu dropdown-menu-end shadow-sm rounded-3 mt-2">
               <li>
                 <router-link to="/profile" class="dropdown-item">
                   <i class="bi bi-person-circle me-2"></i> Hồ sơ
                 </router-link>
               </li>
-              <li><hr class="dropdown-divider" /></li>
+
+              <!-- 🔹 Chỉ hiện nếu role là 'user' -->
+              <li v-if="user.role === 'user'">
+                <router-link to="/order-history" class="dropdown-item">
+                  <i class="bi bi-clock-history me-2"></i> Lịch sử đơn hàng
+                </router-link>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
               <li>
                 <button class="dropdown-item text-danger" @click="handleLogout">
                   <i class="bi bi-box-arrow-right me-2"></i> Đăng xuất
                 </button>
               </li>
             </ul>
+
           </li>
         </ul>
       </div>
@@ -147,12 +149,18 @@ const handleLogout = () => {
 .dropdown-menu {
   border: none;
   padding: 0.5rem;
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .dropdown-item {
   border-radius: 8px;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item i {
+  font-size: 1rem;
 }
 
 .dropdown-item:hover {
